@@ -471,6 +471,7 @@
   background: none;
   border: none;
   cursor: pointer;
+  height: 150px;
   padding: 0;
   display: flex;
   align-items: center;
@@ -485,11 +486,11 @@
 
 /* Ajusta a posição das setas */
 .nav-button.nav-button-prev {
-  margin-left: -15px; /* Move a seta esquerda para fora */
+  margin-left: -9px; /* Move a seta esquerda para fora */
 }
 
 .nav-button.nav-button-next {
-  margin-right: -15px; /* Move a seta direita para fora */
+  margin-right: 9px; /* Move a seta direita para fora */
 }
 
 .carousel-indicators {
@@ -543,11 +544,11 @@
 
   /* Ajusta a posição das setas no mobile */
   .nav-button.nav-button-prev {
-    margin-left: -10px; /* Move a seta esquerda para fora */
+    margin-left: -10px; /* Ajustar a seta no mobile */
   }
 
   .nav-button.nav-button-next {
-    margin-right: -10px; /* Move a seta direita para fora */
+     /* Ajuste para seta no mobile */
   }
 
   .arrow-icon {
