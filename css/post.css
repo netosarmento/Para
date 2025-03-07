@@ -764,14 +764,17 @@
   border-left: 2px solid black;
   padding: 15px;
   display: flex;
-  align-items: center;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
   gap: 5px;
+  height: 100%; /* Ocupa toda a altura disponível */
 }
 
 .star {
   width: 24px;
   height: 24px;
   position: relative;
+  bottom: 11px;
 }
 
 .star.filled::before {
