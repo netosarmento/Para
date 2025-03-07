@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto Frompara, para divulgação do Estado do Pará e ecommerce.">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<nav class="navigation-menu">
+    <img src="./img/logosbg.png" alt="Logo" class="logo" />
+    <ul class="menu-list">
+      <li><button class="menu-item menu-item-home">Home</button></li>
+
+      <li class="dropdown">
+        <button class="menu-item menu-item-posts dropdown-toggle">
+          <span>Postagens</span>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/de1bdbcdc54f417018aa6a8a5ab41c555c14a3ecb34ced46e564a98e3a5e6f9f"
+            alt="Posts dropdown" class="dropdown-icon" />
+        </button>
+        <ul class="submenu">
+          <li><a href="#">Cidades</a></li>
+          <li><a href="#">Restaurantes</a></li>
+          <li><a href="#">Bares</a></li>
+          <li><a href="#">P. Turisticos</a></li>
+          <li><a href="#">P. Históricos</a></li>
+          <li><a href="#">LGBTQI+</a></li>
+        </ul>
+      </li>
+
+      <li><button class="menu-item menu-item-ecommerce">E-commerce</button></li>
+
+      <li class="dropdown">
+        <button class="menu-item menu-item-contacts dropdown-toggle">
+          <span>Contatos</span>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2ac6a45e7abad44fef4effed42788d3472c532623ef2e59a9ee44e4ec34e4932"
+            alt="Contacts dropdown" class="dropdown-icon" />
+        </button>
+        <ul class="submenu">
+          <li><a href="#">Contatos Oficiais</a></li>
+          <li><a href="#">Apoie-nos</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <button class="menu-item menu-item-about dropdown-toggle">
+          <span>Sobre Nós</span>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c0b469592ebdd1736c75758e799fbffd398d98cf135887f85c7e68f444b0698"
+            alt="About dropdown" class="dropdown-icon" />
+        </button>
+        <ul class="submenu">
+          <li><a href="#">FromPara</a></li>
+          <li><a href="#">Políticas</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </li>
+    </ul>
+</nav>
+<!-- Fim menu normal -->
+<!-- menu mobile -->
+<nav class="mobile-navigation-menu">
+    <button class="mobile-menu-item bi bi-house-door">
+      
+      <div class="mobile-menu-text">
+        <span class="mobile-menu-label">Home</span>
+        <span class="mobile-menu-underline"></span>
+      </div>
+    </button>
+  
+    <button class="mobile-menu-item bi bi-calendar-check">
+      <div class="mobile-menu-text">
+        <span class="mobile-menu-label">Posts</span>
+        <span class="mobile-menu-underline"></span>
+      </div>
+    </button>
+  
+    <button class="mobile-menu-item bi bi-bag-check">
+      <div class="mobile-menu-text">
+        <span class="mobile-menu-label">Loja</span>
+        <span class="mobile-menu-underline"></span>
+      </div>
+    </button>
+  
+    <button class="mobile-menu-item bi bi-patch-question">
+      <div class="mobile-menu-text">
+        <span class="mobile-menu-label">Sobre</span>
+        <span class="mobile-menu-underline"></span>
+      </div>
+    </button>
+  
+    <button class="mobile-menu-item bi bi-envelope">
+      <div class="mobile-menu-text">
+        <span class="mobile-menu-label">Contatos</span>
+        <span class="mobile-menu-underline"></span>
+      </div>
+    </button>
+  </nav>
+  
+
+<!-- FIM menu mobile -->
+<header class="welcome-header">
+    <h1 class="welcome-text">
+      <!-- Logo (visível apenas no mobile) -->
+      <div class="logo-mobile">
+        <img src="./img/logosbg.png" alt="Logo" class="logo-image" />
+      </div>
+      <span>Venha</span>
+      <span class="animated-word"></span> 
+      <span>Estado do Pará.</span>
+    </h1>
+</header>
+<!-- FIM HEADER-->
+ <!-- BACKGROUND IMAGE-->
+<div class="image-container"></div>
+<!--- Login -->
+<div class="login-container">
+    <a href="#" class="login-text">Fazer Login</a>
+    <a href="#" class="forgot-password-link">Esqueceu a senha?</a>
+</div>
+<!--- FIM Login -->
+<!--- Carrosel -->
+
+<main>
+    <section class="carousel-container">
+        <div class="carousel-content">
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <img
+                    src="./img/carrosel/pexels-christopher-borges-1300281899-24710600.jpg"
+                    alt="Macaw parrot"
+                    class="carousel-image"
+                />
+                <h1 class="carrosel-text">Bem Vindo a FromPara</h1>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img
+                    src="./img/carrosel/pexels-elif-ilkel-49561975-7867865.jpg"
+                    alt="Segunda imagem"
+                    class="carousel-image"
+                />
+                <h1 class="carrosel-text">Cidades</h1>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img
+                    src="./img/carrosel/pexels-magda-ehlers-pexels-1597765.jpg"
+                    alt="Terceira imagem"
+                    class="carousel-image"
+                />
+                <h1 class="carrosel-text">Restaurantes</h1>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide">
+                <img
+                    src="./img/carrosel/pexels-nandofreitasr-17025853.jpg"
+                    alt="Quarta imagem"
+                    class="carousel-image"
+                />
+                <h1 class="carrosel-text">Bares</h1>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide">
+                <img
+                    src="./img/carrosel/pexels-roman-odintsov-12715154.jpg"
+                    alt="Quinta imagem"
+                    class="carousel-image"
+                />
+                <h1 class="carrosel-text">Pontos Turísticos</h1>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="slide">
+                <img
+                    src="./img/carrosel/pexels-roman-odintsov-12715264.jpg"
+                    alt="Sexta imagem"
+                    class="carousel-image"
+                />
+                <h1 class="carrosel-text">Pontos Históricos</h1>
+            </div>
+
+            <!-- Slide 7 -->
+            <div class="slide">
+                <img
+                    src="./img/carrosel/pexels-roman-odintsov-12715266.jpg"
+                    alt="Sétima imagem"
+                    class="carousel-image"
+                />
+                <h1 class="carrosel-text">LGBTQI+</h1>
+            </div>
+        </div>
+
+        <!-- Navegação por dots -->
+        <nav class="dot-navigation" role="navigation" aria-label="Carousel navigation">
+            <button class="dot active" aria-label="Go to slide 1" aria-current="true"></button>
+            <button class="dot" aria-label="Go to slide 2"></button>
+            <button class="dot" aria-label="Go to slide 3"></button>
+            <button class="dot" aria-label="Go to slide 4"></button>
+            <button class="dot" aria-label="Go to slide 5"></button>
+            <button class="dot" aria-label="Go to slide 6"></button>
+            <button class="dot" aria-label="Go to slide 7"></button>
+        </nav>
+
+        <!-- Setas de navegação -->
+        <div class="navigation-arrows">
+            <button class="arrow-button" aria-label="Previous slide">
+                <svg
+                    class="arrow-left"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M2.5 20C2.5 24.6413 4.34374 29.0925 7.62563 32.3744C10.9075 35.6563 15.3587 37.5 20 37.5C24.6413 37.5 29.0925 35.6563 32.3744 32.3744C35.6563 29.0925 37.5 24.6413 37.5 20C37.5 15.3587 35.6563 10.9075 32.3744 7.62563C29.0925 4.34374 24.6413 2.5 20 2.5C15.3587 2.5 10.9075 4.34374 7.62563 7.62563C4.34374 10.9075 2.5 15.3587 2.5 20ZM40 20C40 25.3043 37.8929 30.3914 34.1421 34.1421C30.3914 37.8929 25.3043 40 20 40C14.6957 40 9.60859 37.8929 5.85786 34.1421C2.10714 30.3914 0 25.3043 0 20C0 14.6957 2.10714 9.60859 5.85786 5.85786C9.60859 2.10714 14.6957 0 20 0C25.3043 0 30.3914 2.10714 34.1421 5.85786C37.8929 9.60859 40 14.6957 40 20ZM28.75 18.75C29.0815 18.75 29.3995 18.8817 29.6339 19.1161C29.8683 19.3505 30 19.6685 30 20C30 20.3315 29.8683 20.6495 29.6339 20.8839C29.3995 21.1183 29.0815 21.25 28.75 21.25H14.2675L19.635 26.615C19.7512 26.7312 19.8434 26.8692 19.9063 27.021C19.9692 27.1729 20.0016 27.3356 20.0016 27.5C20.0016 27.6644 19.9692 27.8271 19.9063 27.979C19.8434 28.1308 19.7512 28.2688 19.635 28.385C19.5188 28.5012 19.3808 28.5934 19.229 28.6563C19.0771 28.7192 18.9144 28.7516 18.75 28.7516C18.5856 28.7516 18.4229 28.7192 18.271 28.6563C18.1192 28.5934 17.9812 28.5012 17.865 28.385L10.365 20.885C10.2486 20.7689 10.1562 20.6309 10.0932 20.4791C10.0302 20.3272 9.99777 20.1644 9.99777 20C9.99777 19.8356 10.0302 19.6728 10.0932 19.5209C10.1562 19.3691 10.2486 19.2311 10.365 19.115L17.865 11.615C18.0997 11.3803 18.4181 11.2484 18.75 11.2484C19.0819 11.2484 19.4003 11.3803 19.635 11.615C19.8697 11.8497 20.0016 12.1681 20.0016 12.5C20.0016 12.8319 19.8697 13.1503 19.635 13.385L14.2675 18.75H28.75Z"
+                        fill="black"
+                    />
+                </svg>
+            </button>
+            <button class="arrow-button" aria-label="Next slide">
+                <svg
+                    class="arrow-right"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M37.5 20C37.5 24.6413 35.6563 29.0925 32.3744 32.3744C29.0925 35.6563 24.6413 37.5 20 37.5C15.3587 37.5 10.9075 35.6563 7.62563 32.3744C4.34375 29.0925 2.5 24.6413 2.5 20C2.5 15.3587 4.34375 10.9075 7.62563 7.62563C10.9075 4.34374 15.3587 2.5 20 2.5C24.6413 2.5 29.0925 4.34374 32.3744 7.62563C35.6563 10.9075 37.5 15.3587 37.5 20ZM0 20C0 25.3043 2.10714 30.3914 5.85786 34.1421C9.60859 37.8929 14.6957 40 20 40C25.3043 40 30.3914 37.8929 34.1421 34.1421C37.8929 30.3914 40 25.3043 40 20C40 14.6957 37.8929 9.60859 34.1421 5.85786C30.3914 2.10714 25.3043 0 20 0C14.6957 0 9.60859 2.10714 5.85786 5.85786C2.10714 9.60859 0 14.6957 0 20ZM11.25 18.75C10.9185 18.75 10.6005 18.8817 10.3661 19.1161C10.1317 19.3505 10 19.6685 10 20C10 20.3315 10.1317 20.6495 10.3661 20.8839C10.6005 21.1183 10.9185 21.25 11.25 21.25H25.7325L20.365 26.615C20.2488 26.7312 20.1566 26.8692 20.0937 27.021C20.0308 27.1729 19.9984 27.3356 19.9984 27.5C19.9984 27.6644 20.0308 27.8271 20.0937 27.979C20.1566 28.1308 20.2488 28.2688 20.365 28.385C20.4812 28.5012 20.6192 28.5934 20.771 28.6563C20.9229 28.7192 21.0856 28.7516 21.25 28.7516C21.4144 28.7516 21.5771 28.7192 21.729 28.6563C21.8808 28.5934 22.0188 28.5012 22.135 28.385L29.635 20.885C29.7514 20.7689 29.8438 20.6309 29.9068 20.4791C29.9698 20.3272 30.0022 20.1644 30.0022 20C30.0022 19.8356 29.9698 19.6728 29.9068 19.5209C29.8438 19.3691 29.7514 19.2311 29.635 19.115L22.135 11.615C21.9003 11.3803 21.5819 11.2484 21.25 11.2484C20.9181 11.2484 20.5997 11.3803 20.365 11.615C20.1303 11.8497 19.9984 12.1681 19.9984 12.5C19.9984 12.8319 20.1303 13.1503 20.365 13.385L25.7325 18.75H11.25Z"
+                        fill="black"
+                    />
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!--
+    <!-- Background BLUR 
+    <section id="backblur">
+        <div class="background-shapes">
+            <div class="shape triangle"></div>
+            <div class="shape rectangle-primary"></div>
+            <div class="shape rectangle-secondary"></div>
+            <div class="shape rectangle-third"></div>
+            <div class="shape rectangle-4"></div>
+            <div class="shape blue-rectangle"></div>
+            <div class="shape circle-large"></div>
+            <div class="shape circle-large-second"></div>
+            <div class="shape circle-large-third"></div>
+            <div class="shape circle-large-4"></div>
+            <div class="shape circle-small"></div>
+            
+        </div>
+    </section>    
+-->
+
+</main>
+
+<footer class="footer">
+    <div class="footer-gradient"></div>
+    <div class="footer-content">
+      <p class="footer-description">
+        O Projeto FromPara tem como objetivo ampliar a divulgação do estado do
+        Pará no ambiente digital, promovendo suas cidades, bares, restaurantes,
+        pontos turísticos, locais históricos e espaços LGBTQI+. Nosso propósito é
+        auxiliar visitantes a descobrir os melhores destinos para passeios
+        turísticos e delícias gastronômicas, permitindo que aproveitem todas as
+        experiências que o estado do Pará pode proporcionar.
+      </p>
+      <div class="footer-copyright">
+        <div class="footer-company">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/dab424709905aaab6464d707cc65fc53af50b021"
+            alt="Tech Norte Logo"
+            class="footer-company-logo"
+          />
+          <p class="footer-company-name">
+            Desenvolvimento Tech Norte Soluções.
+          </p>
+        </div>
+        <p class="footer-rights">
+          Todos os Direitos Reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+
+
+
+<script src="./js/menu.js"></script>
+</body>
+</html>

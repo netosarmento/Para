@@ -1,0 +1,887 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@600&family=Jua&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+
+/* LOGO */
+.logo {
+    width: 60px; /* Definir a largura da logo */
+    height: 60px; /* Definir a altura da logo */
+    margin-right: 20px; /* Adicionar margem à direita */
+}
+
+/* FIM LOGO */
+
+.navigation-menu {
+    display: flex; /* Usar flexbox para layout */
+    justify-content: space-between; /* Espaçar logo e menu */
+    align-items: center; /* Alinhar itens verticalmente no centro */
+    font-family: "IBM Plex Serif", -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    position: relative; /* Manter a posição relativa */
+    padding: 0 20px; /* Adicionar padding lateral */
+    top: 130px; /* Manter a posição do topo */
+}
+
+.menu-list {
+  border-radius: 20px;
+  background-color: rgba(216, 35, 38, 1);
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 11px 16px;
+  list-style: none;
+  margin: 0;
+  position: relative;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(216, 35, 38, 1);
+  border: none;
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 7px 20px;
+  min-height: 40px;
+  border-radius: 12px;
+  transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+  background-color: rgba(117, 13, 14, 0.8);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: rgba(216, 35, 38, 1); /* Mantém o fundo vermelho */
+  border-radius: 8px;
+  padding: 10px;
+  list-style: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  top: 100%;
+  left: 0;
+  min-width: 150px;
+  z-index: 10;
+}
+
+.submenu li {
+  padding: 5px;
+}
+
+.submenu li a {
+  text-decoration: none;
+  color: white; /* Mantém o texto branco */
+  display: block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.submenu li a:hover {
+  background-color: rgba(117, 13, 14, 0.8);
+}
+
+.dropdown.open .submenu {
+  display: block;
+}
+
+/* Ícones */
+.dropdown-icon {
+  width: 15px;
+}
+
+@media (max-width: 991px) {
+  .menu-list {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+
+/*  FIM MENU */
+
+
+
+
+/* Menu Mobile */
+
+
+/* Estilos do menu mobile */
+.mobile-navigation-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: Poppins, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 600;
+  white-space: nowrap;
+  text-align: center;
+  justify-content: center;
+
+  /* Fixa na parte inferior da tela */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7); /* opacidade menu mobile */
+  padding: 10px 0;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999; /* trazer menu mobile pra frente */
+  
+}
+
+/* Oculta o menu em telas maiores */
+@media (min-width: 768px) {
+  .mobile-navigation-menu {
+    display: none;
+  }
+}
+
+.mobile-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px; /* Tamanho fixo para os itens */
+  height: 60px; /* Tamanho fixo para os itens */
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+
+/* Estilo para os ícones do Bootstrap Icons */
+.mobile-menu-item::before {
+  font-family: "bootstrap-icons"; /* Certifique-se de que a fonte dos ícones está carregada */
+  font-size: 24px; /* Tamanho dos ícones */
+  margin-bottom: 5px; /* Espaço entre o ícone e o texto */
+}
+
+/* Ícones específicos */
+.bi-house-door::before {
+  content: "\F479"; /* Código do ícone "house-door" */
+}
+
+.bi-calendar-check::before {
+  content: "\F1E5"; /* Código do ícone "calendar-check" */
+}
+
+.bi-bag-check::before {
+  content: "\F1B0"; /* Código do ícone "bag-check" */
+}
+
+.bi-patch-question::before {
+  content: "\F4C2"; /* Código do ícone "patch-question" */
+}
+
+.bi-envelope::before {
+  content: "\F32F"; /* Código do ícone "envelope" */
+}
+
+.mobile-menu-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-label {
+  font-size: 12px; /* Tamanho do texto */
+}
+
+.mobile-menu-underline {
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  min-height: 1px;
+  width: 100%;
+}
+
+/* Estilos de hover */
+.mobile-menu-item:hover {
+  opacity: 0.8;
+}
+
+/* Acessibilidade - foco */
+.mobile-menu-item:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.2);
+  outline-offset: 2px;
+}
+
+/* Estado ativo (clicado) */
+.mobile-menu-item:active {
+  transform: scale(0.98);
+}
+/* FIM MENU MOBILE */
+
+.welcome-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    text-align: center; /* Centraliza o texto */
+    flex-direction: column; /* Organiza a logo e o texto em coluna */
+}
+
+.welcome-text {
+    font-family: "Lilita One", cursive;
+    font-size: 36px;
+    font-weight: 700; /* Mantém o negrito */
+    background: linear-gradient(90deg, #3c3ea5 0%, #cf3333 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+/* Estilo da logo (oculta por padrão) */
+.logo-mobile {
+    display: none; /* Oculta a logo por padrão */
+    align-self: flex-start; /* Alinha a logo à esquerda */
+    margin-bottom: 15px; /* Adiciona espaçamento entre a logo e o texto */
+}
+
+.logo-image {
+    width: 60px; /* Define a largura da imagem */
+    height: 60px; /* Define a altura da imagem */
+}
+
+/* Efeito de animação do texto */
+.animated-word {
+    font-family: "Lilita One", cursive;
+    font-size: 36px;
+    font-weight: 700; /* Mantém o negrito */
+    background: linear-gradient(90deg, #3c3ea5 0%, #cf3333 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    animation: textChange 6s infinite;
+}
+
+@keyframes textChange {
+    0%, 100% { content: "Conhecer"; }
+    33% { content: "Visitar"; }
+    66% { content: "Explorar"; }
+}
+
+/* Adicionando o efeito usando ::after */
+.animated-word::after {
+    content: "Conhecer";
+    animation: wordCycle 6s infinite;
+}
+
+@keyframes wordCycle {
+    0%, 100% { content: "Conhecer"; }
+    33% { content: "Visitar"; }
+    66% { content: "Explorar"; }
+}
+
+@media (max-width: 991px) {
+    .welcome-text {
+        font-size: 32px;
+    }
+
+    .animated-word {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 640px) {
+    .welcome-header {
+        padding: 30px; /* Ajusta o padding para o mobile */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .welcome-text {
+        font-size: 24px;
+        flex-direction: column; /* Coloca os elementos (texto) em coluna */
+        align-items: center; /* Alinha o texto no centro */
+        gap: 5px; /* Reduz o espaçamento entre os elementos */
+    }
+
+    .animated-word {
+        font-size: 24px;
+    }
+
+    /* Exibe a logo apenas no mobile */
+    .logo-mobile {
+        display: block; /* Exibe a logo */
+        margin-bottom: 15px; /* Espaçamento entre a logo e o texto */
+        align-self: flex-start; /* Alinha a logo à esquerda */
+        margin-left: -75px; /* Botando a logo mais para esquerda  */
+    }
+
+    .logo-image {
+        width: 60px; /* Define a largura da imagem */
+        height: 60px; /* Define a altura da imagem */
+    }
+}
+
+
+/* FIM TEXTO ANIMADO */
+/* BACKGROUND IMAGE */
+.image-container {
+    width: 100%;
+    height: 100vh; /* Defina a altura conforme necessário */
+    background-image: url('/img/banner-2.png');  /* escolhendo imagem do modelo desktop */
+    background-size: cover; /* Ajusta a imagem para cobrir todo o contêiner */
+    background-position: center; /* Centraliza a imagem */
+    position: absolute; /* Para que fique atrás de outros elementos */
+    top: 10px; /* Alinha ao topo da página */
+    left: 0; /* Alinha à esquerda da página */
+    z-index: -1; /* Coloca atrás de outros elementos */
+    
+}
+
+
+/* Imagem de fundo para mobile escolhido */
+@media (max-width: 768px) {
+  .image-container {
+      background-image: url('/img/mobil-banner.png');
+  }
+}
+
+
+/* BACKGROUND IMAGE FIM */
+/* Login */
+.login-container {
+    width: 100%;
+    max-width: 151px;
+    text-align: center;
+    margin-top: -140px; /* Ajuste para posicionar mais perto do topo */
+    padding: 100px; /* Remove o padding excessivo */
+    
+}
+
+.login-text {
+    font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 1); /* Cor do texto padrão (preto) */
+    margin: 0;
+    transition: color 0.3s; /* Adiciona uma transição suave para a cor */
+    text-decoration: none;
+}
+
+.forgot-password-link {
+    font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 1); /* Cor do texto padrão (preto) */
+    text-decoration: none;
+    display: block;
+    margin-top: 4px;
+    transition: color 0.3s; /* Adiciona uma transição suave para a cor */
+}
+
+.login-text:hover,
+.forgot-password-link:hover {
+    color: rgba(21, 7, 228, 1); /* Muda a cor para azul ao passar o mouse */
+    text-decoration: none; /* Remove o sublinhado ao passar o mouse */
+}
+
+/* Estilos específicos para mobile */
+@media (max-width: 640px) {
+    .login-container {
+        margin-top: -130px; /* Ajuste para posicionar mais perto do topo */
+        text-align: left; /* Alinha o texto à esquerda */
+        padding-left: 20px; /* Adiciona um espaçamento à esquerda */
+        max-width: 100%; /* Ocupa a largura total */
+    }
+
+    .login-text,
+    .forgot-password-link {
+        font-size: 14px; /* Reduz o tamanho da fonte para mobile */
+    }
+}
+/* FIM Login */ 
+
+/* Carrosel */
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 728px;
+    margin: 0 auto;
+    left: 30px;
+    height: 353px;
+    overflow: hidden; /* Mantém o overflow hidden para esconder slides inativos */
+    z-index: 1;
+}
+
+.carousel-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.slide {
+    display: none; /* Esconde todos os slides por padrão */
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out; /* Transição suave */
+}
+
+.slide.active {
+    display: block; /* Mostra apenas o slide ativo */
+    opacity: 1;
+}
+
+.carousel-image {
+    width: 100%;
+    max-width: 614px;
+    height: 286px;
+    border-radius: 6px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+.carrosel-text {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fc0206;
+    -webkit-text-stroke: 2px #a00508;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    margin: 0;
+}
+
+.dot-navigation {
+    display: flex;
+    gap: 15px;
+    margin-top: 12px;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #a00508; /* Cor do dot ativo */
+}
+
+.navigation-arrows {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 10; /* Garante que as setas fiquem acima da imagem */
+    box-sizing: border-box; /* Evita que o padding corte as setas */
+}
+
+.arrow-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: fill 0.3s;
+}
+
+.arrow-button:hover .arrow-left,
+.arrow-button:hover .arrow-right {
+    fill: blue; /* Efeito hover azul */
+}
+
+.arrow-left,
+.arrow-right {
+    width: 40px;
+    height: 40px;
+    fill: black; /* Cor inicial das setas */
+}
+
+/* Ajustes SETAS */
+/* Ajuste específico para a seta esquerda */
+.arrow-button:first-child {
+    margin-left: -10px; /* Move a seta esquerda mais para a esquerda */
+}
+
+/* Ajuste específico para a seta direita */
+.arrow-button:last-child {
+    margin-right: -10px; /* Move a seta direita mais para a direita */
+}
+
+.carousel-item img {
+  width: 100%;  /* Garante que a imagem ocupe toda a largura do carrossel */
+  height: auto; /* Mantém a proporção das imagens */
+}
+
+/* Ajustes para versões móveis */
+@media (max-width: 768px) {
+  .carousel {
+    display: block;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .carousel-inner {
+    display: block;
+    text-align: center;
+  }
+
+  .carousel-item {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  .carousel-control-prev {
+    left: 10px;
+  }
+
+  .carousel-control-next {
+    right: 10px;
+  }
+}
+
+/* FIM CARROSEL */
+
+
+/* Background BLUR */
+
+/* Configuração do background */
+#backblur {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent; /* Removido fundo escuro */
+}
+
+/* Container das formas */
+.background-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+   /* transform: translateY(-20%);   Subir eixo Y para botar mais para cima  */
+}
+
+/* Todas as formas com efeito de desfoque */
+.shape {
+    position: absolute;
+    filter: blur(40px);
+    opacity: 0.6;
+}
+
+/* Retângulos */
+.rectangle-primary {
+    width: 200px;
+    height: 150px;
+    background-color: rgba(60, 62, 165, 0.4);
+    top: 20%;
+    left: 30%;
+}
+
+.rectangle-secondary {
+    width: 180px;
+    height: 130px;
+    background-color: rgba(165, 42, 42, 0.4);
+    top: 60%;
+    left: 35%;
+}
+
+.rectangle-third {
+    width: 180px;
+    height: 130px;
+    background-color: rgba(165, 42, 42, 0.4);
+    top: 60%;
+    left: 55%;
+}
+
+.rectangle-4 {
+    width: 180px;
+    height: 130px;
+    background-color: rgba(165, 42, 42, 0.4);
+    top: 30%;
+    left: 65%;
+}
+
+.blue-rectangle {
+    width: 240px;
+    height: 123px;
+    background-color: rgba(61, 89, 201, 0.4);
+    top: 50%;
+    left: 50%;
+}
+
+/* Círculos */
+.circle-large {
+    width: 250px;
+    height: 250px;
+    background-color: rgba(55, 60, 199, 0.4);
+    border-radius: 50%;
+    top: 20%;
+    left: 44%;
+}
+.circle-large-third {
+    width: 250px;
+    height: 250px;
+    background-color: rgba(55, 60, 199, 0.4);
+    border-radius: 50%;
+    top: 20%;
+    left: 44%;    
+}
+
+.circle-large-second {
+    width: 250px;
+    height: 250px;
+    background-color: rgba(55, 60, 199, 0.4);
+    border-radius: 50%;
+    top: 20%;
+    left: 20%;
+}
+
+.circle-large-4 {
+    width: 250px;
+    height: 250px;
+    background-color: rgba(55, 60, 199, 0.4);
+    border-radius: 50%;
+    top: 50%;
+    left: 44%;    
+}
+
+.circle-small {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(61, 89, 201, 0.4);
+    border-radius: 50%;
+    top: 70%;
+    left: 40%;
+}
+
+/* Triângulo */
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 180px solid rgba(255, 165, 0, 0.4);
+    top: 50%;
+    left: 35%;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 991px) {
+    .shape {
+        filter: blur(20px);
+    }
+}
+
+
+
+  /* Background BLUR FIM */
+
+/* Footer */  
+
+footer {
+  width: 100%;
+  min-height: 254px; /* Altura mínima para o footer */
+  position: relative;
+  margin: 0; 
+  padding: 0; 
+  overflow: hidden; /* Evita que o gradiente vaze */
+  border-radius: 8px 8px 0 0; /* Adiciona border-radius ao footer */
+  box-sizing: border-box; /* Garante que padding e borda não aumentem o tamanho */
+}
+
+.footer-gradient {
+  width: 100%;
+  height: 100%; /* Cobrir toda a altura do footer */
+  background: radial-gradient(50% 50% at 50% 50%, #ff0505 0%, #c91c1c 100%);
+  position: absolute; /* Posiciona o gradiente atrás do conteúdo */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Coloca o gradiente atrás do conteúdo */
+  border-radius: 8px 8px 0 0; /* Aplica o border-radius ao gradiente */
+}
+
+.footer-content {
+  position: relative; /* Mantém o conteúdo acima do gradiente */
+  width: 100%;
+  max-width: 100%; /* Limita a largura máxima do conteúdo */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centraliza verticalmente */
+  padding: 20px; /* Espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+  box-sizing: border-box; /* Garante que padding não aumente a largura */
+}
+
+.footer-description {
+  width: 100%;
+  max-width: 769px;
+  color: #fff;
+  font-family: "IBM Plex Serif", serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px; /* Espaçamento abaixo do texto */
+  box-sizing: border-box; /* Garante que padding não aumente a largura */
+}
+
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Espaçamento entre os elementos */
+  box-sizing: border-box; /* Garante que padding não aumente a largura */
+}
+
+.footer-company {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaçamento entre o logo e o texto */
+  box-sizing: border-box; /* Garante que padding não aumente a largura */
+}
+
+.footer-company-logo {
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+}
+
+.footer-company-name {
+  color: #fff;
+  font-family: "Jua", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.footer-rights {
+  color: #fff;
+  font-family: "Jua", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 991px) {
+  .footer-gradient {
+      width: 100%;
+  }
+
+  .footer {
+      min-height: 100vh;
+  }
+
+  .footer-description {
+      font-size: 18px; /* Reduz o tamanho da fonte */
+      padding: 0 15px; /* Adiciona padding lateral */
+  }
+
+  .footer-company-logo {
+      width: 20px;
+      height: 20px;
+  }
+
+  .footer-company-name,
+  .footer-rights {
+      font-size: 18px; /* Reduz o tamanho da fonte */
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-gradient {
+      width: 100%;
+  }
+
+  .footer {
+    left: 30px;
+  }
+
+  .footer-content {
+      padding: 20px 10px; /* Reduz o padding lateral */
+  }
+
+  .footer-description {
+      font-size: 16px; /* Reduz o tamanho da fonte */
+      padding: 0 10px; /* Adiciona padding lateral */
+  }
+
+  .footer-company {
+      flex-direction: column; /* Coloca o logo e o texto em coluna */
+      gap: 5px; /* Reduz o espaçamento */
+  }
+
+  .footer-company-logo {
+      width: 20px;
+      height: 20px;
+  }
+
+  .footer-company-name,
+  .footer-rights {
+      font-size: 16px; /* Reduz o tamanho da fonte */
+  }
+}
+
+/* Footer FIM */
+
+
+/*  Ajustes de TELAS   */
+
+/* esconder menu normal no mobile */
+@media (max-width: 768px) { /* Esconde em telas menores que 768px (tablets e celulares) */
+    .navigation-menu {
+        display: none !important;
+    }
+}
