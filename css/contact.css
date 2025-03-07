@@ -425,14 +425,229 @@
 }
 /* FIM Login */
 
-/* POLITICAS */
+/* contatos */
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 761px;
+  height: 245px;
+  padding: 0 5px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: #b00707; /* Fallback para navegadores antigos */
+  background: radial-gradient(50% 50% at 50% 50%, #eb4c4c 0%, #b00707 100%);
+}
+
+.contact-content {
+  text-align: center;
+  font-family: "Inknut Antiqua", serif;
+  color: #fff;
+}
+
+.contact-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.contact-description {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .contact-section {
+    max-width: 600px;
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .contact-title {
+    font-size: 32px;
+  }
+
+  .contact-subtitle,
+  .contact-description {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-section {
+    max-width: 100%;
+    padding: 20px 15px;
+  }
+
+  .contact-title {
+    font-size: 28px;
+  }
+
+  .contact-subtitle,
+  .contact-description {
+    font-size: 18px;
+  }
+}
+
+
+/* FIM contatos */
+
+/* LINKS SOCIAIS */
+/* Estilos para as redes sociais */
+.social-links-container {
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  align-items: center;
+  font-family: "IBM Plex Serif", -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  text-align: center;
+  justify-content: center;
+}
+
+.social-links-wrapper {
+  display: flex;
+  margin-top: 4px;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-link-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  gap: 8px;
+}
+
+.social-icon {
+  font-size: 32px; /* Tamanho dos ícones */
+  color: #000; /* Cor dos ícones */
+}
+
+.social-icon-1 {
+  font-size: 32px; /* Tamanho dos ícones */
+  color: #2c02e7; /* Cor dos ícones */
+}
+
+.social-icon-2 {
+  font-size: 32px; /* Tamanho dos ícones */
+  color: #d40505; /* Cor dos ícones */
+}
+
+.social-icon-3 {
+  font-size: 32px; /* Tamanho dos ícones */
+  color: #b10404; /* Cor dos ícones */
+}
 
 
 
+.social-text {
+  font-size: 18px; /* Tamanho do texto */
+}
 
-/* FIM POLITICAS */
+/* Estilos para o footer */
+.footer {
+  font-family: "Jua", -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 400;
+  margin-top: 40px; /* Espaço entre as redes sociais e o footer */
+}
+
+.footer-container {
+  border-radius: 8px 8px 0 0;
+  background-color: rgba(206, 26, 26, 1);
+  display: flex;
+  width: 100%;
+  padding: 25px 80px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content {
+  width: 358px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.company-logo {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 25px;
+  border-radius: 4px;
+  margin-left: -5px;
+}
+
+.company-name {
+  margin: 0;
+}
+
+.copyright-text {
+  margin: 0;
+}
+
+/* Ajustes para mobile */
+@media (max-width: 991px) {
+  .social-links-container {
+    font-size: 20px;
+  }
+
+  .social-icon {
+    font-size: 24px; /* Reduz o tamanho dos ícones no mobile */
+  }
+
+  .social-text {
+    font-size: 16px; /* Reduz o tamanho do texto no mobile */
+  }
+
+  .footer-container {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .social-links-container {
+    font-size: 18px;
+  }
+
+  .social-icon {
+    font-size: 20px; /* Tamanho menor para telas pequenas */
+  }
+
+  .social-text {
+    font-size: 14px; /* Tamanho menor para telas pequenas */
+  }
+
+  .footer {
+    margin-top: 20px; /* Espaço menor no mobile */
+  }
+}
 
 
+/* LINKS SOCIAIS */
 /* FOOTER */
 
 .footer {
