@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Projeto Frompara, para divulgação do Estado do Pará e ecommerce.">
-    <title>Ecommerce</title>
-    <link rel="stylesheet" href="./css/e-galery.css">
+    <title>Ecommerce-produto</title>
+    <link rel="stylesheet" href="./src/css/e-galery.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 <nav class="navigation-menu">
-    <img src="./img/logosbg.png" alt="Logo" class="logo" />
+    <img src="./src/img/logosbg.png" alt="Logo" class="logo" />
     <ul class="menu-list">
       <li><button class="menu-item menu-item-home">Home</button></li>
 
@@ -22,16 +22,16 @@
             alt="Posts dropdown" class="dropdown-icon" />
         </button>
         <ul class="submenu">
-          <li><a href="#">Cidades</a></li>
-          <li><a href="#">Restaurantes</a></li>
-          <li><a href="#">Bares</a></li>
-          <li><a href="#">P. Turisticos</a></li>
-          <li><a href="#">P. Históricos</a></li>
-          <li><a href="#">LGBTQI+</a></li>
+          <li><a href="categorias.html">Cidades</a></li>
+          <li><a href="categorias.html">Restaurantes</a></li>
+          <li><a href="categorias.html">Bares</a></li>
+          <li><a href="categorias.html">P. Turisticos</a></li>
+          <li><a href="categorias.html">P. Históricos</a></li>
+          <li><a href="categorias.html">LGBTQI+</a></li>
         </ul>
       </li>
 
-      <li><button class="menu-item menu-item-ecommerce">E-commerce</button></li>
+      <li><a href="Ecommerce-galery.html" style="text-decoration: none;"><button class="menu-item menu-item-ecommerce">E-commerce</button></a></li>
 
       <li class="dropdown">
         <button class="menu-item menu-item-contacts dropdown-toggle">
@@ -40,8 +40,8 @@
             alt="Contacts dropdown" class="dropdown-icon" />
         </button>
         <ul class="submenu">
-          <li><a href="#">Contatos Oficiais</a></li>
-          <li><a href="#">Apoie-nos</a></li>
+          <li><a href="contact.html">Contatos Oficiais</a></li>
+          <li><a href="apoienos.html">Apoie-nos</a></li>
         </ul>
       </li>
 
@@ -52,9 +52,9 @@
             alt="About dropdown" class="dropdown-icon" />
         </button>
         <ul class="submenu">
-          <li><a href="#">FromPara</a></li>
-          <li><a href="#">Políticas</a></li>
-          <li><a href="#">FAQ</a></li>
+          <li><a href="sobrenos.html">FromPara</a></li>
+          <li><a href="Politicas.html">Políticas</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
         </ul>
       </li>
     </ul>
@@ -62,41 +62,41 @@
 <!-- Fim menu normal -->
 <!-- menu mobile -->
 <nav class="mobile-navigation-menu">
+  <a href="index.html" style="text-decoration: none;">
     <button class="mobile-menu-item bi bi-house-door">
-      
       <div class="mobile-menu-text">
         <span class="mobile-menu-label">Home</span>
         <span class="mobile-menu-underline"></span>
       </div>
-    </button>
-  
+    </button></a>
+    <a href="categorias.html" style="text-decoration: none;">
     <button class="mobile-menu-item bi bi-calendar-check">
       <div class="mobile-menu-text">
         <span class="mobile-menu-label">Posts</span>
         <span class="mobile-menu-underline"></span>
       </div>
-    </button>
-  
+    </button></a>
+    <a href="Ecommerce-galery.html" style="text-decoration: none;">
     <button class="mobile-menu-item bi bi-bag-check">
       <div class="mobile-menu-text">
         <span class="mobile-menu-label">Loja</span>
         <span class="mobile-menu-underline"></span>
       </div>
-    </button>
-  
+    </button></a>
+    <a href="sobre.html" style="text-decoration: none;">
     <button class="mobile-menu-item bi bi-patch-question">
       <div class="mobile-menu-text">
         <span class="mobile-menu-label">Sobre</span>
         <span class="mobile-menu-underline"></span>
       </div>
-    </button>
-  
+    </button></a>
+    <a href="contatos.html" style="text-decoration: none;">
     <button class="mobile-menu-item bi bi-envelope">
       <div class="mobile-menu-text">
         <span class="mobile-menu-label">Contatos</span>
         <span class="mobile-menu-underline"></span>
       </div>
-    </button>
+    </button></a>
   </nav>
   
 
@@ -105,7 +105,7 @@
     <h1 class="welcome-text">
       <!-- Logo (visível apenas no mobile) -->
       <div class="logo-mobile">
-        <img src="./img/logosbg.png" alt="Logo" class="logo-image" />
+        <img src="./src/img/logosbg.png" alt="Logo" class="logo-image" />
       </div>
       <span>Conhecer</span>
       <span class="animated-word"></span> 
@@ -117,7 +117,7 @@
 <div class="image-container"></div>
 <!--- Login -->
 <div class="login-container">
-    <a href="#" class="login-text">Fazer Login</a>
+    <a href="Login.html" class="login-text">Fazer Login</a>
     <a href="#" class="forgot-password-link">Esqueceu a senha?</a>
 </div>
 <!--- FIM Login -->
@@ -126,7 +126,7 @@
     <div class="carousel-content">
         <!-- Slide 1 -->
         <div class="carousel-slide active">
-            <img src="./img/carrosel/pexels-elif-ilkel-49561975-7867865.jpg" 
+            <img src="./src/img/carrosel/pexels-elif-ilkel-49561975-7867865.jpg" 
                  alt="Colorful macaw parrot" 
                  class="carousel-image">
             <article class="product-card">
@@ -144,7 +144,7 @@
 
         <!-- Slide 2 -->
         <div class="carousel-slide">
-            <img src="./img/carrosel/pexels-nandofreitasr-17025853.jpg" 
+            <img src="./src/img/carrosel/pexels-nandofreitasr-17025853.jpg" 
                  alt="Beautiful landscape" 
                  class="carousel-image">
             <article class="product-card">
@@ -162,12 +162,12 @@
 
         <!-- Slide 3 -->
         <div class="carousel-slide">
-            <img src="./img/carrosel/pexels-roman-odintsov-12715154.jpg" 
+            <img src="./src/img/carrosel/pexels-roman-odintsov-12715154.jpg" 
                  alt="City view" 
                  class="carousel-image">
             <article class="product-card">
                 <div class="glass-effect-container">
-                    <img src="./img/carrosel/pexels-roman-odintsov-12715264.jpg" 
+                    <img src="./src/img/carrosel/pexels-roman-odintsov-12715264.jpg" 
                          alt="Product Image" 
                          class="product-image">
                     <div class="content-wrapper">
@@ -248,7 +248,7 @@
         </div>
     </div>
 </footer>
-<script src="./js/menu.js"></script>
-<script src="./js/e-galery.js"></script> 
+<script src="./src/js/menu.js"></script>
+<script src="./src/js/e-galery.js"></script> 
 </body>
 </html>
