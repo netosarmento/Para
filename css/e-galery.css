@@ -290,21 +290,21 @@
 }
 
 @keyframes textChange {
-    0%, 100% { content: "Conhecer"; }
-    33% { content: "Visitar"; }
-    66% { content: "Explorar"; }
+    0%, 100% { content: "Experimentar"; }
+    33% { content: "Sabores"; }
+    66% { content: "Aromas"; }
 }
 
 /* Adicionando o efeito usando ::after */
 .animated-word::after {
-    content: "Conhecer";
+    content: "Experimentar";
     animation: wordCycle 6s infinite;
 }
 
 @keyframes wordCycle {
-    0%, 100% { content: "Conhecer"; }
-    33% { content: "Visitar"; }
-    66% { content: "Explorar"; }
+    0%, 100% { content: "Experimentar"; }
+    33% { content: "Sabores"; }
+    66% { content: "Aromas"; }
 }
 
 @media (max-width: 991px) {
