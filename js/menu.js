@@ -75,3 +75,28 @@ dots.forEach((dot, index) => {
 
 // Mostra o primeiro slide ao carregar a página
 showSlide(currentSlide);
+
+
+
+// FAQ
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const faqItems = document.querySelectorAll(".faq-item");
+  
+    faqItems.forEach((item) => {
+      const question = item.querySelector(".faq-question");
+  
+      question.addEventListener("click", () => {
+        // Fecha todas as respostas antes de abrir a clicada
+        faqItems.forEach((otherItem) => {
+          if (otherItem !== item) {
+            otherItem.classList.remove("active");
+          }
+        });
+  
+        // Abre ou fecha a resposta clicada
+        item.classList.toggle("active");
+      });
+    });
+  });
