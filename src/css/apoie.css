@@ -1,0 +1,554 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@600&family=Jua&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&display=swap");
+
+
+/* LOGO */
+.logo {
+    width: 60px; /* Definir a largura da logo */
+    height: 60px; /* Definir a altura da logo */
+    margin-right: 20px; /* Adicionar margem à direita */
+}
+
+/* FIM LOGO */
+
+.navigation-menu {
+    display: flex; /* Usar flexbox para layout */
+    justify-content: space-between; /* Espaçar logo e menu */
+    align-items: center; /* Alinhar itens verticalmente no centro */
+    font-family: "IBM Plex Serif", -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    position: relative; /* Manter a posição relativa */
+    padding: 0 20px; /* Adicionar padding lateral */
+    top: 130px; /* Manter a posição do topo */
+}
+
+.menu-list {
+  border-radius: 20px;
+  background-color: rgba(216, 35, 38, 1);
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 11px 16px;
+  list-style: none;
+  margin: 0;
+  position: relative;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(216, 35, 38, 1);
+  border: none;
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 7px 20px;
+  min-height: 40px;
+  border-radius: 12px;
+  transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+  background-color: rgba(117, 13, 14, 0.8);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: rgba(216, 35, 38, 1); /* Mantém o fundo vermelho */
+  border-radius: 8px;
+  padding: 10px;
+  list-style: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  top: 100%;
+  left: 0;
+  min-width: 150px;
+  z-index: 10;
+}
+
+.submenu li {
+  padding: 5px;
+}
+
+.submenu li a {
+  text-decoration: none;
+  color: white; /* Mantém o texto branco */
+  display: block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.submenu li a:hover {
+  background-color: rgba(117, 13, 14, 0.8);
+}
+
+.dropdown.open .submenu {
+  display: block;
+}
+
+/* Ícones */
+.dropdown-icon {
+  width: 15px;
+}
+
+@media (max-width: 991px) {
+  .menu-list {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+/* esconder menu normal no mobile */
+@media (max-width: 768px) { /* Esconde em telas menores que 768px (tablets e celulares) */
+    .navigation-menu {
+        display: none !important;
+    }
+}
+
+
+/*  FIM MENU */
+
+
+
+
+/* Menu Mobile */
+
+
+/* Estilos do menu mobile */
+.mobile-navigation-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: Poppins, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 600;
+  white-space: nowrap;
+  text-align: center;
+  justify-content: center;
+
+  /* Fixa na parte inferior da tela */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7); /* opacidade menu mobile */
+  padding: 10px 0;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999; /* trazer menu mobile pra frente */
+  
+}
+
+/* Oculta o menu em telas maiores */
+@media (min-width: 768px) {
+  .mobile-navigation-menu {
+    display: none;
+  }
+}
+
+.mobile-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px; /* Tamanho fixo para os itens */
+  height: 60px; /* Tamanho fixo para os itens */
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+
+/* Estilo para os ícones do Bootstrap Icons */
+.mobile-menu-item::before {
+  font-family: "bootstrap-icons"; /* Certifique-se de que a fonte dos ícones está carregada */
+  font-size: 24px; /* Tamanho dos ícones */
+  margin-bottom: 5px; /* Espaço entre o ícone e o texto */
+}
+
+/* Ícones específicos */
+.bi-house-door::before {
+  content: "\F479"; /* Código do ícone "house-door" */
+}
+
+.bi-calendar-check::before {
+  content: "\F1E5"; /* Código do ícone "calendar-check" */
+}
+
+.bi-bag-check::before {
+  content: "\F1B0"; /* Código do ícone "bag-check" */
+}
+
+.bi-patch-question::before {
+  content: "\F4C2"; /* Código do ícone "patch-question" */
+}
+
+.bi-envelope::before {
+  content: "\F32F"; /* Código do ícone "envelope" */
+}
+
+.mobile-menu-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-label {
+  font-size: 12px; /* Tamanho do texto */
+}
+
+.mobile-menu-underline {
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  min-height: 1px;
+  width: 100%;
+}
+
+/* Estilos de hover */
+.mobile-menu-item:hover {
+  opacity: 0.8;
+}
+
+/* Acessibilidade - foco */
+.mobile-menu-item:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.2);
+  outline-offset: 2px;
+}
+
+/* Estado ativo (clicado) */
+.mobile-menu-item:active {
+  transform: scale(0.98);
+}
+/* FIM MENU MOBILE */
+
+.welcome-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    text-align: center; /* Centraliza o texto */
+    flex-direction: column; /* Organiza a logo e o texto em coluna */
+}
+
+.welcome-text {
+    font-family: "Lilita One", cursive;
+    font-size: 36px;
+    font-weight: 700; /* Mantém o negrito */
+    background: linear-gradient(90deg, #3c3ea5 0%, #cf3333 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+/* Estilo da logo (oculta por padrão) */
+.logo-mobile {
+    display: none; /* Oculta a logo por padrão */
+    align-self: flex-start; /* Alinha a logo à esquerda */
+    margin-bottom: 15px; /* Adiciona espaçamento entre a logo e o texto */
+}
+
+.logo-image {
+    width: 60px; /* Define a largura da imagem */
+    height: 60px; /* Define a altura da imagem */
+}
+
+/* Efeito de animação do texto */
+.animated-word {
+    font-family: "Lilita One", cursive;
+    font-size: 36px;
+    font-weight: 700; /* Mantém o negrito */
+    background: linear-gradient(90deg, #3c3ea5 0%, #cf3333 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    animation: textChange 6s infinite;
+}
+
+@keyframes textChange {
+    0%, 100% { content: "Conhecer"; }
+    33% { content: "Visitar"; }
+    66% { content: "Explorar"; }
+}
+
+/* Adicionando o efeito usando ::after */
+.animated-word::after {
+    content: "Conhecer";
+    animation: wordCycle 6s infinite;
+}
+
+@keyframes wordCycle {
+    0%, 100% { content: "Conhecer"; }
+    33% { content: "Visitar"; }
+    66% { content: "Explorar"; }
+}
+
+@media (max-width: 991px) {
+    .welcome-text {
+        font-size: 32px;
+    }
+
+    .animated-word {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 640px) {
+    .welcome-header {
+        padding: 30px; /* Ajusta o padding para o mobile */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .welcome-text {
+        font-size: 24px;
+        flex-direction: column; /* Coloca os elementos (texto) em coluna */
+        align-items: center; /* Alinha o texto no centro */
+        gap: 5px; /* Reduz o espaçamento entre os elementos */
+    }
+
+    .animated-word {
+        font-size: 24px;
+    }
+
+    /* Exibe a logo apenas no mobile */
+    .logo-mobile {
+        display: block; /* Exibe a logo */
+        margin-bottom: 15px; /* Espaçamento entre a logo e o texto */
+        align-self: flex-start; /* Alinha a logo à esquerda */
+        margin-left: -75px; /* Botando a logo mais para esquerda  */
+    }
+
+    .logo-image {
+        width: 60px; /* Define a largura da imagem */
+        height: 60px; /* Define a altura da imagem */
+    }
+}
+
+
+/* FIM TEXTO ANIMADO */
+/* BACKGROUND IMAGE */
+.image-container {
+    width: 100%;
+    height: 100vh; /* Defina a altura conforme necessário */
+    background-image: url('/img/banner-2.png');  /* escolhendo imagem do modelo desktop */
+    background-size: cover; /* Ajusta a imagem para cobrir todo o contêiner */
+    background-position: center; /* Centraliza a imagem */
+    position: absolute; /* Para que fique atrás de outros elementos */
+    top: 10px; /* Alinha ao topo da página */
+    left: 0; /* Alinha à esquerda da página */
+    z-index: -1; /* Coloca atrás de outros elementos */
+    
+}
+
+
+/* Imagem de fundo para mobile escolhido */
+@media (max-width: 768px) {
+  .image-container {
+      background-image: url('/img/mobil-banner.png');
+  }
+}
+
+
+/* BACKGROUND IMAGE FIM */
+/* Login */
+.login-container {
+    width: 100%;
+    max-width: 151px;
+    text-align: center;
+    margin-top: -140px; /* Ajuste para posicionar mais perto do topo */
+    padding: 100px; /* Remove o padding excessivo */
+    
+}
+
+.login-text {
+    font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 1); /* Cor do texto padrão (preto) */
+    margin: 0;
+    transition: color 0.3s; /* Adiciona uma transição suave para a cor */
+    text-decoration: none;
+}
+
+.forgot-password-link {
+    font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 1); /* Cor do texto padrão (preto) */
+    text-decoration: none;
+    display: block;
+    margin-top: 4px;
+    transition: color 0.3s; /* Adiciona uma transição suave para a cor */
+}
+
+.login-text:hover,
+.forgot-password-link:hover {
+    color: rgba(21, 7, 228, 1); /* Muda a cor para azul ao passar o mouse */
+    text-decoration: none; /* Remove o sublinhado ao passar o mouse */
+}
+
+/* Estilos específicos para mobile */
+@media (max-width: 640px) {
+    .login-container {
+        margin-top: -130px; /* Ajuste para posicionar mais perto do topo */
+        text-align: left; /* Alinha o texto à esquerda */
+        padding-left: 20px; /* Adiciona um espaçamento à esquerda */
+        max-width: 100%; /* Ocupa a largura total */
+    }
+
+    .login-text,
+    .forgot-password-link {
+        font-size: 14px; /* Reduz o tamanho da fonte para mobile */
+    }
+}
+/* FIM Login */
+
+/* POLITICAS */
+
+
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: justify; /* Justifica o texto */
+  word-wrap: break-word;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  text-align: center; /* Alinha o título */
+}
+
+.qr-code {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: white;
+  padding: 10px;
+  display: block;
+  margin-left: auto; /* Move o QR Code para a direita */
+  margin-right: auto;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+@media (max-width: 640px) {
+  .container {
+      padding: 20px;
+      width: 90%;
+  }
+  h1 {
+      font-size: 20px;
+  }
+  p {
+      font-size: 13px;
+  }
+}
+
+
+
+/* FIM POLITICAS */
+
+
+/* FOOTER */
+
+.footer {
+    font-family: Jua, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+}
+
+.footer-container {
+    border-radius: 8px 8px 0 0;
+    background-color: rgba(206, 26, 26, 1);
+    display: flex;
+    width: 100%;
+    padding: 25px 80px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    width: 358px;
+    max-width: 100%;
+    text-align: center; /* Centraliza o texto */
+}
+
+.company-info {
+    display: flex;
+    align-items: center; /* Alinha a logo e o nome da empresa */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-bottom: 10px; /* Espaço entre a logo/nome e o copyright */
+}
+
+.company-logo {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 25px;
+    border-radius: 4px;
+    margin-left: -5px; /* Espaço entre a logo e o nome */
+}
+
+.company-name {
+    margin: 0; /* Remove margens para evitar deslocamento */
+}
+
+.copyright-text {
+    margin: 0; /* Remove margens para evitar deslocamento */
+}
+
+@media (max-width: 991px) {
+    .footer-container {
+        max-width: 100%;
+        padding: 25px 20px;
+    }
+}
