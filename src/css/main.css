@@ -359,7 +359,7 @@
 /* Imagem de fundo para mobile escolhido */
 @media (max-width: 768px) {
   .image-container {
-      background-image: url('Para/main/src/img/mobil-banner.png');
+      background-image: url('/Para/src/img/mobil-banner.png');
   }
 }
 
