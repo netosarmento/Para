@@ -166,7 +166,9 @@
   justify-content: center;
   width: 60px; /* Tamanho fixo para os itens */
   height: 60px; /* Tamanho fixo para os itens */
-  background: none;
+  background: transparent !important;
+  color: rgb(0, 0, 0, 1) !important;
+  text-decoration: none !important;
   border: none;
   padding: 0;
   cursor: pointer;
