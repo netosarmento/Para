@@ -3,8 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@600&family=Jua&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap");
+
 
 /* LOGO */
 .logo {
@@ -121,6 +120,9 @@
 
 /*  FIM MENU */
 
+.category-link {
+  text-decoration: none;
+}
 
 
 
@@ -354,7 +356,7 @@
 .image-container {
     width: 100%;
     height: 100vh; /* Defina a altura conforme necessário */
-    background-image: url('/Para/src/img/banner-2.png');  /* escolhendo imagem do modelo desktop */
+    background-image: url('/src/img/banner-2.png');  /* escolhendo imagem do modelo desktop */
     background-size: cover; /* Ajusta a imagem para cobrir todo o contêiner */
     background-position: center; /* Centraliza a imagem */
     position: absolute; /* Para que fique atrás de outros elementos */
@@ -368,7 +370,7 @@
 /* Imagem de fundo para mobile escolhido */
 @media (max-width: 768px) {
   .image-container {
-      background-image: url('/Para/src/img/mobil-banner.png');
+      background-image: url('/src/img/mobil-banner.png');
   }
 }
 
@@ -428,432 +430,81 @@
 }
 /* FIM Login */
 
+/* Categorias */
 
-/* CARROSEL */
+/* Ajuste desktop */
 
-.carousel-container {
-  position: relative;
-  width: 100%;
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
-.carousel-content {
-  position: relative;
-  width: 100%;
-  max-width: 614px;
-  margin: 0 auto;
-  overflow: hidden; /* Prevents images from overflowing */
-}
 
-.carousel-image {
-  width: 100%;
-  height: 286px;
-  border-radius: 6px;
-  object-fit: cover;
-  display: none; /* Hide all images initially */
-}
-
-.carousel-image.active {
-  display: block; /* Show only the active image */
-}
-
-.carousel-navigation {
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Centraliza as setas verticalmente */
-  padding: 0 10px;
-}
-
-.nav-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  height: 150px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.arrow-icon {
-  width: 25px;
-  height: 25px;
-  fill: rgb(95, 93, 93); /* Cor das setas */
-}
-
-/* Ajusta a posição das setas */
-.nav-button.nav-button-prev {
-  margin-left: -9px; /* Move a seta esquerda para fora */
-}
-
-.nav-button.nav-button-next {
-  margin-right: 9px; /* Move a seta direita para fora */
-}
-
-.carousel-indicators {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  margin-top: 12px;
-}
-
-.indicator {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #d9d9d9;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.indicator.active {
-  background-color: #000;
-}
-
-.carousel-title {
-  font-family: "IBM Plex Serif", serif;
-  font-weight: 700;
-  font-size: 18px;
-  color: #2c2828;
-  text-align: center;
-  margin-top: 20px;
-}
-
-@media (max-width: 991px) {
-  .carousel-container {
-    padding: 0 15px;
+.categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
+    gap: 47px;
+    width: max-content; /* Largura máxima da grid */
+    margin: 0 auto; /* Centraliza a grid na tela */
+    padding: 20px;
+    justify-items: center; /* Centraliza os itens horizontalmente */
   }
-
-  .carousel-image {
-    height: 250px;
-  }
-}
-
-@media (max-width: 640px) {
-  .carousel-container {
-    padding: 0 10px;
-  }
-
-  .carousel-image {
-    height: 200px;
-  }
-
-  /* Ajusta a posição das setas no mobile */
-  .nav-button.nav-button-prev {
-    margin-left: -10px; /* Ajustar a seta no mobile */
-  }
-
-  .nav-button.nav-button-next {
-     /* Ajuste para seta no mobile */
-  }
-
-  .arrow-icon {
-    fill: rgb(95, 93, 93); /* Cor das setas no mobile */
-  }
-}
-
-
-/*   FIM CARROSEL      */
-/* RATING */
-
-.ratings-container {
+  
+  .category-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
-    padding: 10px;
+    gap: 1px;
+    width: 100%; /* Garante que o item ocupe toda a largura da célula */
   }
   
-  .ratings-text {
-    color: #000;
-    font-family: "Poppins", sans-serif;
+  .category-image {
+    width: 100%; /* Ocupa toda a largura da célula */
+    max-width: 200px; /* Define uma largura máxima para a imagem */
+    height: 200px; /* Altura fixa para todas as imagens */
+    border-radius: 8px;
+    object-fit: cover; /* Use 'contain' se preferir não cortar as imagens */
+    display: block; /* Garante que a imagem seja tratada como um bloco */
+}
+  
+  .category-title {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 700;
     font-size: 20px;
-    font-weight: 800;
-    margin: 0;
+    color: #000;
+    margin-top: 25px;
+    margin-bottom: 0;
+    text-align: center; /* Centraliza o texto */
   }
   
-  .stars-container {
-    display: flex;
-    justify-content: center;
+  /* Ajustes para tablet */
+  @media (max-width: 991px) {
+    .categories {
+      grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+      gap: 20px;
+      padding: 15px;
+    }
+  
+    .category-image {
+      height: 180px;
+    }
   }
   
-  .stars-wrapper {
-    display: flex;
-    align-items: center;
-  }
+  /* Ajustes para mobile */
+  @media (max-width: 640px) {
+    .categories {
+      grid-template-columns: 1fr; /* 1 coluna em mobile */
+      gap: 15px;
+      padding: 10px;
+    }
   
-  .stars {
-    width: 158px;
-    height: 25px;
-    cursor: pointer;
-  }
+    .category-image {
+      height: 160px;
+    }
   
-  .star {
-    transition: fill 0.2s;
-    fill: #F7FF14; /* Cor inicial das estrelas */
-  }
-  
-  .star:hover,
-  .star.active {
-    fill: #FFD700; /* Cor ao passar o mouse ou selecionar */
+    .category-title {
+      font-size: 18px;
+    }
   }
 
-/* FIM RATING */
+/* FIM CATEGORIAS */
 
-/* TEXTO POST */
-.content-post {
-  font-family: "Poppins", sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.5;
-  color: #000;
-  padding: 20px;
-  white-space: pre-wrap;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media (max-width: 991px) {
-  .content-post {
-    font-size: 11px;
-    padding: 15px;
-  }
-}
-
-@media (max-width: 640px) {
-  .content-post {
-    font-size: 10px;
-    padding: 10px;
-  }
-}
-
-
-
-.address-container {
-  display: flex;
-  flex-direction: column; /* Alinha os itens em coluna */
-  align-items: center; /* Centraliza os itens horizontalmente */
-  justify-content: center; /* Centraliza os itens verticalmente */
-  width: 100%; /* Ocupa toda a largura disponível */
-  max-width: 370px; /* Define uma largura máxima */
-  margin: 0 auto; /* Centraliza o container na tela */
-  gap: 4px 10px;
-  font-family: "Poppins", sans-serif;
-  text-align: center; /* Centraliza o texto dentro dos itens */
-}
-
-.address-heading,
-.maps-heading {
-  color: #000;
-  font-size: 20px;
-  font-weight: 800;
-  margin: 0; /* Remove margens padrão */
-}
-
-.address-text {
-  color: #000;
-  font-size: 20px;
-  font-weight: 600;
-  margin: 0; /* Remove margens padrão */
-}
-
-.maps-url {
-  color: #1507e4;
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-@media (max-width: 991px) {
-  .address-container {
-    padding: 0 15px; /* Adiciona padding para telas menores */
-  }
-}
-
-@media (max-width: 640px) {
-  .address-container {
-    gap: 2px 8px; /* Ajusta o espaçamento para telas menores */
-  }
-
-  .address-heading,
-  .maps-heading,
-  .address-text,
-  .maps-url {
-    font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
-  }
-}
-
-
-/* TEXTO POST FIM */
-
-/* SEÇÃO COMENTARIOS */
-.comments-section {
-  width: 935px; /* Largura fixa para desktop */
-  max-width: 100%; /* Garante que não ultrapasse a largura da tela */
-  margin: 0 auto; /* Centraliza o container na página */
-  background: radial-gradient(circle, #ffffff 0%, #f5f5f5 100%);
-  border-radius: 8px;
-  overflow: hidden;
-  font-family: "Poppins", sans-serif;
-}
-
-.comments-header {
-  display: grid;
-  grid-template-columns: 112px 1fr 276px;
-  border-bottom: 2px solid black;
-  height: 50px;
-}
-
-.header-cell {
-  font-size: 20px;
-  font-weight: 800;
-  padding: 10px;
-  margin: 0;
-}
-
-.header-user {
-  border-right: 2px solid black;
-}
-
-.header-comments {
-  padding-left: 15px;
-}
-
-.header-rating {
-  border-left: 2px solid black;
-  padding-left: 15px;
-}
-
-.comment-row {
-  display: grid;
-  grid-template-columns: 112px 1fr 276px;
-  border-bottom: 2px solid black;
-  min-height: 75px;
-  margin: 0;
-}
-
-.user-cell {
-  border-right: 2px solid black;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.user-avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.comment-cell {
-  padding: 15px;
-  font-size: 14px;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.rating-cell {
-  border-left: 2px solid black;
-  padding: 15px;
-  display: flex;
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
-  gap: 5px;
-  height: 100%; /* Ocupa toda a altura disponível */
-}
-
-.star {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  bottom: 11px;
-}
-
-.star.filled::before {
-  content: "★";
-  position: absolute;
-  color: gold;
-  font-size: 24px;
-  line-height: 1;
-}
-
-.star.empty::before {
-  content: "☆";
-  position: absolute;
-  color: gray;
-  font-size: 24px;
-  line-height: 1;
-}
-
-@media (max-width: 991px) {
-  .comments-section {
-    width: 90%; /* Ajusta a largura para telas menores */
-  }
-
-  .header-cell {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 640px) {
-  .comments-section {
-    width: 100%; /* Ocupa toda a largura em telas pequenas */
-    border-radius: 4px;
-  }
-
-  .comments-header {
-    grid-template-columns: 80px 1fr 100px;
-  }
-
-  .comment-row {
-    grid-template-columns: 80px 1fr 100px;
-  }
-
-  .header-cell {
-    font-size: 16px;
-    padding: 5px;
-  }
-
-  .user-cell {
-    padding: 5px;
-  }
-
-  .user-avatar {
-    width: 40px;
-    height: 40px;
-  }
-
-  .comment-cell {
-    padding: 10px;
-    font-size: 12px;
-  }
-
-  .rating-cell {
-    padding: 5px;
-  }
-
-  .star {
-    width: 16px;
-    height: 16px;
-  }
-
-  .star.filled::before,
-  .star.empty::before {
-    font-size: 16px;
-  }
-}
-
-/* FIM COMENTARIOS */
 
 /* FOOTER */
 

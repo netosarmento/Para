@@ -152,7 +152,7 @@
 }
 
 /* Oculta o menu em telas maiores */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .mobile-navigation-menu {
     display: none;
   }
