@@ -312,6 +312,7 @@
     .welcome-header {
         padding: 30px; /* Ajusta o padding para o mobile */
         text-align: center; /* Centraliza o texto */
+        font-weight: 400;
     }
 
     .welcome-text {
