@@ -319,6 +319,7 @@
         flex-direction: column; /* Coloca os elementos (texto) em coluna */
         align-items: center; /* Alinha o texto no centro */
         gap: 5px; /* Reduz o espaçamento entre os elementos */
+        font-weight: 400;
     }
 
     .animated-word {
